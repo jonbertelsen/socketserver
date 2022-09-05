@@ -32,6 +32,7 @@ class ClientHandler extends Thread
         {
             try
             {
+
                 dataOutputStream.writeUTF("Choose: [Date | Time | Quote ]..\n" + "Or Exit");
 
                 // getting answers from client
@@ -70,7 +71,8 @@ class ClientHandler extends Thread
             }
             catch (IOException e)
             {
-                e.printStackTrace();
+                System.out.println("You didn't Exit gracefully. Dumbo.");
+                break;
             }
         }
 
